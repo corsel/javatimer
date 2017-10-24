@@ -13,9 +13,17 @@ public class TWTimer extends Task<Void> {
 	Button resetButton = new Button("Reset");
 	Label label = new Label("01 : 23 : 45");
 	
+	Date startTime = new Date();
+	Date setTime = new Date();
+	
 	@Override
 	protected Void call() throws Exception {
 		return null;
+	}
+	
+	public void reset() {
+		startTime = Calendar.getInstance().getTime();
+		setTime = Calendar.getInstance().getTime();
 	}
 	
 	public VBox getWidget() {
