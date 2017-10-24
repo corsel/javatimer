@@ -16,10 +16,12 @@ public class TWInterface extends Application {
 		Scene scene = new Scene(root, 324, 200);
 		
 		VBox vbox = new VBox(10);
-		
 		vbox.getChildren().addAll(
 			timer.getWidget(), 
 			clock.getWidget());
+			
+		new Thread(timer).start();
+		new Thread(clock).start();
 			
 		root.getChildren().add(vbox);
 		stage.setTitle("Deneme");		
@@ -28,6 +30,7 @@ public class TWInterface extends Application {
 		stage.setX(1600);
 		stage.setY(850);
 		stage.show();
+		
 		System.out.println("Fin.\n");
 	}
 	
