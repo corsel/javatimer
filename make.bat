@@ -1,0 +1,1 @@
+javac TW*.java && jar cfe TW.jar TWInterface *.class && java -jar TW.jar
